@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: 237598454971.dkr.ecr.us-east-1.amazonaws.com/users
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+nginxConfig: 
+  enabled: true
