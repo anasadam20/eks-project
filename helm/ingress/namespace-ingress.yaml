@@ -26,7 +26,7 @@ spec:
           service:
             name: orders
             port:
-              number: 8080
+              number: 80
       - path: /items
         pathType: Prefix
         backend:
