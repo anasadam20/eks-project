@@ -1,38 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Include common styling here -->
+  <meta charset="UTF-8">
+  <title>MyApp Portal - Items</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero {
+      background: linear-gradient(135deg, #343a40, #495057);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      margin-bottom: 30px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .sidebar {
+      background-color: #212529;
+      min-height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar .nav-link {
+      color: #adb5bd;
+      margin: 5px 0;
+    }
+    .sidebar .nav-link.active {
+      background-color: #495057;
+      color: #fff;
+      border-radius: 4px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+  <!-- Top Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">MyApp</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="users.html">Users</a></li>
-        <li class="nav-item"><a class="nav-link" href="orders.html">Orders</a></li>
-        <li class="nav-item"><a class="nav-link active" href="items.html">Items</a></li>
-      </ul>
-    </div>
+    <a class="navbar-brand ms-3" href="#">MyApp</a>
   </nav>
 
-  <div class="hero">
-    <h1>Items Service</h1>
-    <p>Browse and manage inventory items</p>
-  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside class="col-md-2 sidebar">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="users.html">Users</a></li>
+          <li class="nav-item"><a class="nav-link" href="orders.html">Orders</a></li>
+          <li class="nav-item"><a class="nav-link active" href="items.html">Items</a></li>
+          <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+          <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+        </ul>
+      </aside>
 
-  <div class="container">
-    <div class="card shadow">
-      <div class="card-body">
-        <h5 class="card-title">Items Catalog</h5>
-        <p class="card-text">This section displays all available items in the inventory.</p>
-        <a href="/items/api" class="btn btn-warning">View Items API</a>
-      </div>
+      <!-- Main Content -->
+      <main class="col-md-10">
+        <div class="hero">
+          <h1>Items Service</h1>
+          <p>Browse, manage, and analyze inventory items</p>
+        </div>
+
+        <div class="container">
+          <h2 class="mb-4">Items Catalog</h2>
+          <div class="card-grid">
+            <!-- Example Item Card -->
+            <div class="card shadow">
+              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Item Image">
+              <div class="card-body">
+                <h5 class="card-title">Item A</h5>
+                <p class="card-text">Description of Item A. Includes stock details and pricing.</p>
+                <a href="/items/api/itemA" class="btn btn-primary">View API</a>
+              </div>
+            </div>
+
+            <div class="card shadow">
+              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Item Image">
+              <div class="card-body">
+                <h5 class="card-title">Item B</h5>
+                <p class="card-text">Description of Item B. Includes stock details and pricing.</p>
+                <a href="/items/api/itemB" class="btn btn-primary">View API</a>
+              </div>
+            </div>
+
+            <div class="card shadow">
+              <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Item Image">
+              <div class="card-body">
+                <h5 class="card-title">Item C</h5>
+                <p class="card-text">Description of Item C. Includes stock details and pricing.</p>
+                <a href="/items/api/itemC" class="btn btn-primary">View API</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 MyApp Portal</p>
+    <p>&copy; 2026 MyApp Portal | Designed with Bootstrap</p>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
